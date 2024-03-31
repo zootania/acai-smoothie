@@ -12,7 +12,6 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Literal, Optional, Union
 
-
 import aiofiles
 import lief
 import yara
@@ -388,7 +387,9 @@ async def process_floss_file(
 
     _, stderr = await process.communicate()
     if stderr:
-        logging.error(f"Error while processing floss on file: {file_path!r}: {stderr!r}")
+        logging.error(
+            f"Error while processing floss on file: {file_path!r}: {stderr!r}"
+        )
 
     logging.info(f"Command output for file {os.path.basename(file_path)}:")
 
@@ -418,12 +419,6 @@ def process_exiftool(
             metadata, os.path.join(output_directory, output_file_name)
         )
     return metadata
-
-
-from collections import defaultdict
-from datetime import datetime
-
-import lief
 
 
 def from_timestamp_to_date(timestamp: int) -> str:
@@ -1362,7 +1357,7 @@ def find_pattern_matches(text: str, pattern: str) -> list[str]:
     )
 
 
-async def async_extract_with_regex_individual_patterns(text: str) ->dict[str, list]:
+async def async_extract_with_regex_individual_patterns(text: str) -> dict[str, list]:
     """
     Asynchronously applies each regex pattern individually to the provided text.
     """
