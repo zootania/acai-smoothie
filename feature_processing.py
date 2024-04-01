@@ -5,29 +5,54 @@ import json
 import logging
 import os
 import re
+import socket
 import subprocess
 import sys
+import time
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
-from typing import Any, Literal, Optional, Union
+from typing import Any, Dict, Literal, Optional, Union
+from urllib.parse import urlparse
 
 import aiofiles
+import censys
 import lief
+import pandas as pd
+import tldextract
 import yara
+
+# https://github.com/censys/censys-python
+# https://github.com/censys/censys-python
+from censys.search import CensysCerts, CensysHosts
 from oletools import rtfobj
 from oletools.oleid import OleID
 from oletools.olevba import VBA_Parser
 from PyPDF2 import PdfReader
+
+NON_COMMERCIAL_API_LIMIT = 1000
+
 
 logger = logging.getLogger(__name__)
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 )
-logger = logging.getLogger(__name__)
 
 exif_tool_path = "bins/exiftool.exe"
+floss_executable_path = "bins/floss2.2.exe"
+
+
+top_500_domains = "data/top_500_domains.csv"
+censys_api_id = os.getenv("CENSYS_API_ID")
+censys_api_secret = os.getenv("CENSYS_API_SECRET")
+censys_certificates = CensysCerts(api_id=censys_api_id, api_secret=censys_api_secret)
+censys_hosts = CensysHosts(api_id=censys_api_id, api_secret=censys_api_secret)
+
+
+def get_first_submission_date(vt_meta: dict[str, Any]):
+    first_submission_date = vt_meta["attributes"]["first_submission_date"]
+    return datetime.utcfromtimestamp(first_submission_date)
 
 
 def extract_ole_features(
@@ -387,9 +412,7 @@ async def process_floss_file(
 
     _, stderr = await process.communicate()
     if stderr:
-        logging.error(
-            f"Error while processing floss on file: {file_path!r}: {stderr!r}"
-        )
+        logging.error(f"Error while processing floss on file: {file_path}: {stderr}")
 
     logging.info(f"Command output for file {os.path.basename(file_path)}:")
 
@@ -1074,18 +1097,21 @@ def interpreter(binary: lief.ELF.Binary, type_of_binary: str) -> dict[str, str]:
         return {}
 
 
-def lief_features(subdir: str, sample: str) -> dict[str, Any]:
+def process_lief_features(
+    sample_file_path: str, output_directory: str
+) -> dict[str, Any]:
     """
     Analyzes a binary file with LIEF and extracts various features, saving them as a JSON file.
 
     Args:
-        subdir: The directory where to save the features file.
-        sample: The path to the binary sample to analyze.
+        sample_file_path: The path to the binary sample to analyze.
+        output_directory: The directory where to save the features file.
+
     """
     final_result = {}
 
     try:
-        binary = lief.parse(sample)
+        binary = lief.parse(sample_file_path)
         type_of_binary = check_binary_format(
             binary
         )  # Updated to use the refactored function name
@@ -1115,7 +1141,7 @@ def lief_features(subdir: str, sample: str) -> dict[str, Any]:
 
         # Writing the results to a JSON file
         filename = "lief_features.json"
-        path_to_file = os.path.join(subdir, filename)
+        path_to_file = os.path.join(output_directory, filename)
         with open(path_to_file, "w", encoding="utf-8") as f:
             json.dump(final_result, f, indent=4)
 
@@ -1424,6 +1450,226 @@ async def regex_fun(
         )
 
 
+def censys_ip_data(ip: str) -> dict:
+    """
+    Fetches host data for a given IP address from Censys.
+
+    Args:
+      ip: The IP address to query host data for.
+
+    Returns:
+      A dictionary representing the host data for the given IP address.
+    """
+    if ip is None:
+        return {}
+    try:
+        host = censys_hosts.view(ip)
+        return host
+    except Exception as e:
+        # Log error or handle it as per your logging setup
+        print(f"Error fetching data for IP {ip}: {str(e)}")
+        return {}
+
+
+def censys_host_data(domain_name: str) -> list:
+    """
+    Fetches host data for a given domain name from Censys.
+
+    Args:
+      domain_name: The domain name to query host data for.
+
+    Returns:
+      A list of dictionaries, each representing the host data for the domain.
+    """
+    domain_host_result = []
+    censys_host_result = censys_hosts.search(domain_name, max_records=10)
+    for search_result_host in censys_host_result:
+        domain_host_result.append(search_result_host)
+
+    return domain_host_result
+
+
+def censys_certificate_data(
+    domain_name: str, sample_left_date: datetime, sample_right_date: str = "*"
+) -> list:
+    """
+    Fetches certificate data for a given domain name within a specified date range from Censys.
+
+    Args:
+      domain_name: The domain name to query certificate data for.
+      sample_left_date: The start date for the query range.
+      sample_right_date: The end date for the query range, defaults to "*".
+
+    Returns:
+      A list of dictionaries, each representing the certificate data for the domain within the given date range.
+    """
+    sample_left_date_str = sample_left_date.strftime("%Y-%m-%d")
+
+    certificate_query = f"parsed.extensions.subject_alt_name.dns_names:{domain_name} AND added_at:[{sample_left_date_str} TO {sample_right_date}]"
+    certificates_search_results = censys_certificates.search(
+        certificate_query,
+        fields=[
+            "parsed.subject.common_name",
+            "parsed.extensions.subject_alt_name.dns_names",
+            "parsed.issuer_dn",
+            "fingerprint_sha256",
+            "parsed.issuer.organization",
+            "validation.microsoft.in_revocation_set",
+            "validation.chrome.in_revocation_set",
+            "revocation.crl.revoked",
+        ],
+        max_records=6,
+    )
+
+    domain_cert_data = []
+    for search_results in certificates_search_results:
+        if not search_results:
+            continue
+        search_result = search_results[0]
+
+        cert_data_fields = {
+            "subdomains": search_result.get(
+                "parsed.extensions.subject_alt_name.dns_names", []
+            ),
+            "issuer_dn": search_result.get("parsed.issuer_dn", ""),
+            "fingerprint_sha256": search_result.get("fingerprint_sha256", ""),
+            "issuer_organization": next(
+                iter(search_result.get("parsed.issuer.organization", [])), None
+            ),
+            "microsoft_banned": search_result.get(
+                "validation.microsoft.in_revocation_set", False
+            ),
+            "google_banned": search_result.get(
+                "validation.chrome.in_revocation_set", False
+            ),
+            "cert_revoked": search_result.get("revocation.crl.revoked", False),
+        }
+        domain_cert_data.append(cert_data_fields)
+
+    return domain_cert_data
+
+
+def process_censys_file(
+    regex_json_path: str,
+    vt_meta_file_path: str,
+    file_hash: str,
+    output_directory: str,
+    output_flie_name: str = "censys_features_withhostdata.json",
+) -> dict[str, dict[str, Any]]:
+    """
+    Processes files to extract Censys features based on regex results and VirusTotal metadata.
+
+    Args:
+      regex_json_path: Path to the JSON file containing regex results.
+      vt_meta_file_path: Path to the JSON file containing VirusTotal metadata.
+      file_hash: The hash of the file to process.
+      output_directory: The directory where to save the Censys results file.
+      output_file_name: The name of the output file to save the Censys results.
+
+    Returns:
+      A dictionary with Censys features for each URL and IP address found.
+    """
+    with open(regex_json_path, "r") as file:
+        regex_results = json.load(file).get(file_hash, {})
+
+    with open(vt_meta_file_path, "r") as file:
+        vt_meta_json = json.load(file)
+
+    censys_results = censys_features(regex_results, vt_meta_json)
+
+    with open(os.path.join(output_directory, output_flie_name), "w") as file:
+        json.dump(censys_results, file, indent=4)
+    return censys_results
+
+
+def censys_features(
+    regex_results: Dict[str, Any], vt_meta_json: Dict[str, Any]
+) -> Dict[str, Dict]:
+    """
+    Fetches Censys features for the given URLs and IP addresses extracted via regex, along with meta information from VirusTotal.
+
+    Args:
+      regex_results: A dictionary containing regex-extracted values, including URLs and IP addresses.
+      vt_meta_json: A dictionary containing metadata from VirusTotal.
+
+    Returns:
+      A dictionary with Censys features for each URL and IP address.
+
+    Example:
+        >> process_censys_file(regex_json_path, vt_meta_file_path, file_hash)
+    """
+    censys_results = {}
+    urls = regex_results.get("URL", [])
+    ips = regex_results.get("IPv4", [])
+    first_submission = get_first_submission_date(vt_meta_json)
+    censys_urls = domain_info(urls, list_of_popular_domain)
+    # Process URLs
+    for parsed_url in censys_urls:
+
+        try:
+            censys_results[parsed_url] = {"CertificateData": [], "DomainData": []}
+            if first_submission:
+                certificate_data = censys_certificate_data(parsed_url, first_submission)
+                censys_results[parsed_url]["CertificateData"] = certificate_data
+            censys_results[parsed_url]["DomainData"] = censys_host_data(parsed_url)
+        except Exception as e:
+            print(f"Exception processing URL {parsed_url}: {e}")
+
+    # Process IPs
+    for ip in ips:
+        try:
+            socket.inet_aton(ip)  # Validates IPv4 format
+            censys_results[ip] = {"IPData": censys_ip_data(ip)}
+        except socket.error:
+            logging.error(f"Invalid IP address format: {ip}")
+        except Exception as e:
+            logging.error(f"Exception processing IP address {ip}: {e}")
+
+    return censys_results
+
+
+def get_popular_domains() -> list[str]:
+    """
+    Reads a CSV file containing top domains and extracts unique root domains.
+
+    Returns:
+        A list of unique root domain names.
+    """
+    return pd.read_csv(top_500_domains)["Root Domain"].unique().tolist()
+
+
+def domain_info(url_list: list[str], popular_domains: list[str]) -> list[str]:
+    """
+    Filters out URLs that belong to popular domains and extracts the domain part
+    from the remaining URLs.
+
+    Args:
+        url_list: A list of URLs to process.
+        popular_domains: A list of popular domain names to exclude.
+
+    Returns:
+        A list of unique domain names excluding popular domains and possible port numbers.
+    """
+    censys_url: set[str] = set()
+
+    for url in url_list:
+        if url is None:
+            continue
+
+        try:
+            domain_address = urlparse(url).netloc
+            # Split domain from possible port number
+            domain, _, _ = domain_address.partition(":")
+            # Check for second-level domain (SLD)
+            sld = ".".join(domain.split(".")[-2:])
+            if domain not in popular_domains and sld not in popular_domains:
+                censys_url.add(domain)
+        except Exception as e:
+            print(f"Exception occurred while processing URL {url}: {e}")
+
+    return list(censys_url)
+
+
 # To run the async function, use asyncio.run() if calling from a non-async context
 # Example:
 # asyncio.run(regex_fun('/path/to/json', 'file_hash_example', '/sub/dir'))
@@ -1443,11 +1689,37 @@ file_hash = "3f5fb5fd5b29a805f13611c9e8acad3ce3e319c6060d92b693378a8506714e9c"
 file_hash = "00bc6fcfa82a693db4d7c1c9d5f4c3d0bfbbd0806e122f1fbded034eb9a67b10"
 root_dir = rf"C:\Users\ricewater\Documents\TestCorpus\{file_hash}"
 floss_json_results = "flossresults_reduced_7.json"
+regex_results = "regex_results.json"
+censys_file_name = "censys_features_withhostdata.json"
 sample_file_path = os.path.join(root_dir, file_hash)
 floss_json_path = os.path.join(root_dir, floss_json_results)
+regex_json_path = os.path.join(root_dir, regex_results)
+censys_results_path = os.path.join(root_dir, censys_file_name)
+vt_meta_file = f"{file_hash}.json"
+vt_meta_file_path = os.path.join(root_dir, vt_meta_file)
 floss_executable_path = "bins/floss2.2.exe"
+list_of_popular_domain = get_popular_domains()
 
-# # Run the process_file function with asyncio's event loop
-asyncio.run(process_floss_file(sample_file_path, root_dir, floss_executable_path))
+# # # Run the process_file function with asyncio's event loop
+# asyncio.run(process_floss_file(sample_file_path, root_dir, floss_executable_path))
 
-# asyncio.run(regex_fun(floss_json_path, file_hash, root_dir, reprocess=True))
+# # asyncio.run(regex_fun(floss_json_path, file_hash, root_dir, reprocess=True))
+
+_ = process_document_file(sample_file_path, root_dir)
+floss_results = asyncio.run(
+    process_floss_file(sample_file_path, root_dir, floss_executable_path)
+)
+process_yara_rule(sample_file_path, "yara_rules/malcat.yar", root_dir)
+process_exiftool(sample_file_path, root_dir)
+process_lief_features(sample_file_path, root_dir)
+
+if os.path.exists(floss_json_path):
+    asyncio.run(regex_fun(floss_json_path, file_hash, root_dir, reprocess=True))
+
+if os.path.exists(regex_json_path):
+    process_censys_file(
+        regex_json_path=regex_json_path,
+        vt_meta_file_path=vt_meta_file_path,
+        file_hash=file_hash,
+        output_directory=root_dir,
+    )

@@ -5,6 +5,9 @@ __pycache__/
 
 ; Ignore jupyter checkpoints
 .ipynb_checkpoints/*
+.ipynb_checkpoints/
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
 
 # C extensions
 *.so
