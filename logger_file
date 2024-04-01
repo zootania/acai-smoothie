@@ -1,0 +1,391 @@
+2024-04-01 19:48:10,877 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\00bc6fcfa82a693db4d7c1c9d5f4c3d0bfbbd0806e122f1fbded034eb9a67b10.
+2024-04-01 19:48:13,152 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\00bc6fcfa82a693db4d7c1c9d5f4c3d0bfbbd0806e122f1fbded034eb9a67b10\00bc6fcfa82a693db4d7c1c9d5f4c3d0bfbbd0806e122f1fbded034eb9a67b10: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.16 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\00bc6fcfa82a693db4d7c1c9d5f4c3d0bfbbd0806e122f1fbded034eb9a67b10\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:48:13,152 - root - INFO - Command output for file 00bc6fcfa82a693db4d7c1c9d5f4c3d0bfbbd0806e122f1fbded034eb9a67b10:
+2024-04-01 19:48:13,483 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:48:13,483 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:48:13,483 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:48:13,571 - __main__ - INFO - Warning: No exported function found
+2024-04-01 19:48:13,571 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:48:13,571 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 19:48:13,663 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:48:21,142 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\00d1726e2ba77c4bed66a6c5c7f1a743cf7bb480deff15f034d67cf72d558c83.
+2024-04-01 19:48:23,219 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\00d1726e2ba77c4bed66a6c5c7f1a743cf7bb480deff15f034d67cf72d558c83\00d1726e2ba77c4bed66a6c5c7f1a743cf7bb480deff15f034d67cf72d558c83: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.05 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\00d1726e2ba77c4bed66a6c5c7f1a743cf7bb480deff15f034d67cf72d558c83\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:48:23,219 - root - INFO - Command output for file 00d1726e2ba77c4bed66a6c5c7f1a743cf7bb480deff15f034d67cf72d558c83:
+2024-04-01 19:48:23,540 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:48:23,540 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:48:23,540 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:48:23,542 - __main__ - INFO - Warning: No exported function found
+2024-04-01 19:48:23,542 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:48:23,542 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 19:48:23,543 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:48:24,595 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\0a9c88d03260b92608c9c079a1b449cf46e5cd764f12f2ec852038dd6bd0fa97.
+2024-04-01 19:48:26,593 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\0a9c88d03260b92608c9c079a1b449cf46e5cd764f12f2ec852038dd6bd0fa97\0a9c88d03260b92608c9c079a1b449cf46e5cd764f12f2ec852038dd6bd0fa97: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.00 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\0a9c88d03260b92608c9c079a1b449cf46e5cd764f12f2ec852038dd6bd0fa97\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:48:26,593 - root - INFO - Command output for file 0a9c88d03260b92608c9c079a1b449cf46e5cd764f12f2ec852038dd6bd0fa97:
+2024-04-01 19:48:26,889 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:48:26,889 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:48:26,890 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:48:26,891 - __main__ - INFO - Warning: No exported function found
+2024-04-01 19:48:26,891 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:48:26,891 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 19:48:26,892 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:48:28,156 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\3f5fb5fd5b29a805f13611c9e8acad3ce3e319c6060d92b693378a8506714e9c.
+2024-04-01 19:48:30,105 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\3f5fb5fd5b29a805f13611c9e8acad3ce3e319c6060d92b693378a8506714e9c\3f5fb5fd5b29a805f13611c9e8acad3ce3e319c6060d92b693378a8506714e9c: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.00 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\3f5fb5fd5b29a805f13611c9e8acad3ce3e319c6060d92b693378a8506714e9c\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:48:30,106 - root - INFO - Command output for file 3f5fb5fd5b29a805f13611c9e8acad3ce3e319c6060d92b693378a8506714e9c:
+2024-04-01 19:48:30,395 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:48:30,407 - __main__ - INFO - Warning: No resource found
+2024-04-01 19:48:30,408 - __main__ - INFO - Error: No dll found
+2024-04-01 19:48:30,408 - __main__ - INFO - Warning: No import found
+2024-04-01 19:48:30,408 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:48:34,626 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\4188736108d2b73b57f63c0b327fb5119f82e94ff2d6cd51e9ad92093023ec93.
+2024-04-01 19:48:36,598 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\4188736108d2b73b57f63c0b327fb5119f82e94ff2d6cd51e9ad92093023ec93\4188736108d2b73b57f63c0b327fb5119f82e94ff2d6cd51e9ad92093023ec93: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.02 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\4188736108d2b73b57f63c0b327fb5119f82e94ff2d6cd51e9ad92093023ec93\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:48:36,598 - root - INFO - Command output for file 4188736108d2b73b57f63c0b327fb5119f82e94ff2d6cd51e9ad92093023ec93:
+2024-04-01 19:48:36,908 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:48:36,908 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:48:36,910 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:48:36,954 - __main__ - INFO - Warning: No exported function found
+2024-04-01 19:48:36,954 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:48:36,954 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 19:48:37,005 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:48:45,875 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\00bc6fcfa82a693db4d7c1c9d5f4c3d0bfbbd0806e122f1fbded034eb9a67b10.
+2024-04-01 19:48:48,050 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\00bc6fcfa82a693db4d7c1c9d5f4c3d0bfbbd0806e122f1fbded034eb9a67b10\00bc6fcfa82a693db4d7c1c9d5f4c3d0bfbbd0806e122f1fbded034eb9a67b10: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.16 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\00bc6fcfa82a693db4d7c1c9d5f4c3d0bfbbd0806e122f1fbded034eb9a67b10\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:48:48,050 - root - INFO - Command output for file 00bc6fcfa82a693db4d7c1c9d5f4c3d0bfbbd0806e122f1fbded034eb9a67b10:
+2024-04-01 19:48:48,383 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:48:48,383 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:48:48,383 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:48:48,475 - __main__ - INFO - Warning: No exported function found
+2024-04-01 19:48:48,475 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:48:48,475 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 19:48:48,567 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:49:01,029 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\00d1726e2ba77c4bed66a6c5c7f1a743cf7bb480deff15f034d67cf72d558c83.
+2024-04-01 19:49:03,075 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\00d1726e2ba77c4bed66a6c5c7f1a743cf7bb480deff15f034d67cf72d558c83\00d1726e2ba77c4bed66a6c5c7f1a743cf7bb480deff15f034d67cf72d558c83: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.05 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\00d1726e2ba77c4bed66a6c5c7f1a743cf7bb480deff15f034d67cf72d558c83\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:49:03,075 - root - INFO - Command output for file 00d1726e2ba77c4bed66a6c5c7f1a743cf7bb480deff15f034d67cf72d558c83:
+2024-04-01 19:49:03,407 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:49:03,407 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:49:03,408 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:49:03,409 - __main__ - INFO - Warning: No exported function found
+2024-04-01 19:49:03,409 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:49:03,409 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 19:49:03,410 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:49:07,486 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\0a9c88d03260b92608c9c079a1b449cf46e5cd764f12f2ec852038dd6bd0fa97.
+2024-04-01 19:49:09,444 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\0a9c88d03260b92608c9c079a1b449cf46e5cd764f12f2ec852038dd6bd0fa97\0a9c88d03260b92608c9c079a1b449cf46e5cd764f12f2ec852038dd6bd0fa97: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.00 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\0a9c88d03260b92608c9c079a1b449cf46e5cd764f12f2ec852038dd6bd0fa97\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:49:09,444 - root - INFO - Command output for file 0a9c88d03260b92608c9c079a1b449cf46e5cd764f12f2ec852038dd6bd0fa97:
+2024-04-01 19:49:09,755 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:49:09,755 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:49:09,755 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:49:09,756 - __main__ - INFO - Warning: No exported function found
+2024-04-01 19:49:09,756 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:49:09,756 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 19:49:09,757 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:49:14,081 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\3f5fb5fd5b29a805f13611c9e8acad3ce3e319c6060d92b693378a8506714e9c.
+2024-04-01 19:49:16,037 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\3f5fb5fd5b29a805f13611c9e8acad3ce3e319c6060d92b693378a8506714e9c\3f5fb5fd5b29a805f13611c9e8acad3ce3e319c6060d92b693378a8506714e9c: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.00 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\3f5fb5fd5b29a805f13611c9e8acad3ce3e319c6060d92b693378a8506714e9c\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:49:16,037 - root - INFO - Command output for file 3f5fb5fd5b29a805f13611c9e8acad3ce3e319c6060d92b693378a8506714e9c:
+2024-04-01 19:49:16,328 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:49:16,340 - __main__ - INFO - Warning: No resource found
+2024-04-01 19:49:16,340 - __main__ - INFO - Error: No dll found
+2024-04-01 19:49:16,340 - __main__ - INFO - Warning: No import found
+2024-04-01 19:49:16,340 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:49:23,581 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\4188736108d2b73b57f63c0b327fb5119f82e94ff2d6cd51e9ad92093023ec93.
+2024-04-01 19:49:25,563 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\4188736108d2b73b57f63c0b327fb5119f82e94ff2d6cd51e9ad92093023ec93\4188736108d2b73b57f63c0b327fb5119f82e94ff2d6cd51e9ad92093023ec93: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.02 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\4188736108d2b73b57f63c0b327fb5119f82e94ff2d6cd51e9ad92093023ec93\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:49:25,563 - root - INFO - Command output for file 4188736108d2b73b57f63c0b327fb5119f82e94ff2d6cd51e9ad92093023ec93:
+2024-04-01 19:49:25,872 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:49:25,872 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:49:25,874 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:49:25,920 - __main__ - INFO - Warning: No exported function found
+2024-04-01 19:49:25,920 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:49:25,920 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 19:49:25,971 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:49:35,249 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\469aa49f4f628498111af193d9220fcc41825d94525246656e40b0560d4cd267.
+2024-04-01 19:49:37,287 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\469aa49f4f628498111af193d9220fcc41825d94525246656e40b0560d4cd267\469aa49f4f628498111af193d9220fcc41825d94525246656e40b0560d4cd267: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.11 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\469aa49f4f628498111af193d9220fcc41825d94525246656e40b0560d4cd267\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:49:37,287 - root - INFO - Command output for file 469aa49f4f628498111af193d9220fcc41825d94525246656e40b0560d4cd267:
+2024-04-01 19:49:37,590 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:49:37,590 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:49:37,590 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:49:37,590 - __main__ - INFO - Warning: No imported function found
+2024-04-01 19:49:37,590 - __main__ - INFO - Warning: No exported function found
+2024-04-01 19:49:37,590 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:49:37,590 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 19:49:37,590 - __main__ - INFO - Warning: No resource found
+2024-04-01 19:49:37,590 - __main__ - INFO - Error: No dll found
+2024-04-01 19:49:37,590 - __main__ - INFO - Warning: No import found
+2024-04-01 19:49:37,590 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:49:41,487 - root - ERROR - error: Process the file C:\Users\ricewater\Documents\TestCorpus\5407cda7d3a75e7b1e030b1f33337a56f293578ffa8b3ae19c671051ed314290 failed because: Command '['bins/exiftool.exe', '-j', '-charset', 'latin1', 'C:\\Users\\ricewater\\Documents\\TestCorpus\\5407cda7d3a75e7b1e030b1f33337a56f293578ffa8b3ae19c671051ed314290\\5407cda7d3a75e7b1e030b1f33337a56f293578ffa8b3ae19c671051ed314290']' returned non-zero exit status 1.
+2024-04-01 19:49:45,835 - root - INFO - The file C:\Users\ricewater\Documents\TestCorpus\59e1edf4d82fae4978e97512b0331b7eb21dd4b838b850ba46794d9c7a2c0983\59e1edf4d82fae4978e97512b0331b7eb21dd4b838b850ba46794d9c7a2c0983 doesn't have VBA macros.
+2024-04-01 19:49:54,052 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\59e1edf4d82fae4978e97512b0331b7eb21dd4b838b850ba46794d9c7a2c0983\59e1edf4d82fae4978e97512b0331b7eb21dd4b838b850ba46794d9c7a2c0983: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 5.75 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\59e1edf4d82fae4978e97512b0331b7eb21dd4b838b850ba46794d9c7a2c0983\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:49:54,053 - root - INFO - Command output for file 59e1edf4d82fae4978e97512b0331b7eb21dd4b838b850ba46794d9c7a2c0983:
+2024-04-01 19:50:31,228 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\648c2067ef3d59eb94b54c43e798707b030e0383b3651bcc6840dae41808d3a9.
+2024-04-01 19:50:33,204 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\648c2067ef3d59eb94b54c43e798707b030e0383b3651bcc6840dae41808d3a9\648c2067ef3d59eb94b54c43e798707b030e0383b3651bcc6840dae41808d3a9: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.02 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\648c2067ef3d59eb94b54c43e798707b030e0383b3651bcc6840dae41808d3a9\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:50:33,204 - root - INFO - Command output for file 648c2067ef3d59eb94b54c43e798707b030e0383b3651bcc6840dae41808d3a9:
+2024-04-01 19:50:33,501 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:50:33,501 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:50:33,501 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:50:33,504 - __main__ - INFO - Warning: No exported function found
+2024-04-01 19:50:33,504 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:50:33,504 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 19:50:33,504 - __main__ - INFO - Warning: No resource found
+2024-04-01 19:50:36,799 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\8b6380534dcae5830e1e194f8c54466db365246cb8df998686f04818e37d84c1.
+2024-04-01 19:50:38,739 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\8b6380534dcae5830e1e194f8c54466db365246cb8df998686f04818e37d84c1\8b6380534dcae5830e1e194f8c54466db365246cb8df998686f04818e37d84c1: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.01 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\8b6380534dcae5830e1e194f8c54466db365246cb8df998686f04818e37d84c1\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:50:38,739 - root - INFO - Command output for file 8b6380534dcae5830e1e194f8c54466db365246cb8df998686f04818e37d84c1:
+2024-04-01 19:50:39,033 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:50:39,033 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:50:39,034 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:50:39,094 - __main__ - INFO - Warning: No resource found
+2024-04-01 19:50:39,094 - __main__ - INFO - Error: No dll found
+2024-04-01 19:50:39,094 - __main__ - INFO - Warning: No import found
+2024-04-01 19:50:39,094 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:50:42,403 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\92005051ae314d61074ed94a52e76b1c3e21e7f0e8c1d1fdd497a006ce45fa61.
+2024-04-01 19:50:44,347 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\92005051ae314d61074ed94a52e76b1c3e21e7f0e8c1d1fdd497a006ce45fa61\92005051ae314d61074ed94a52e76b1c3e21e7f0e8c1d1fdd497a006ce45fa61: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.01 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\92005051ae314d61074ed94a52e76b1c3e21e7f0e8c1d1fdd497a006ce45fa61\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:50:44,347 - root - INFO - Command output for file 92005051ae314d61074ed94a52e76b1c3e21e7f0e8c1d1fdd497a006ce45fa61:
+2024-04-01 19:50:44,639 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:50:44,639 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:50:44,645 - __main__ - INFO - Warning: No resource found
+2024-04-01 19:50:44,645 - __main__ - INFO - Error: No dll found
+2024-04-01 19:50:44,645 - __main__ - INFO - Warning: No import found
+2024-04-01 19:50:44,645 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:50:47,961 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\982dda5eec52dd54ff6b0b04fd9ba8f4c566534b78f6a46dada624af0316044e.
+2024-04-01 19:50:50,119 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\982dda5eec52dd54ff6b0b04fd9ba8f4c566534b78f6a46dada624af0316044e\982dda5eec52dd54ff6b0b04fd9ba8f4c566534b78f6a46dada624af0316044e: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.19 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\982dda5eec52dd54ff6b0b04fd9ba8f4c566534b78f6a46dada624af0316044e\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:50:50,119 - root - INFO - Command output for file 982dda5eec52dd54ff6b0b04fd9ba8f4c566534b78f6a46dada624af0316044e:
+2024-04-01 19:50:50,492 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:50:50,492 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:50:50,504 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:50:50,529 - __main__ - INFO - Warning: No exported function found
+2024-04-01 19:50:50,529 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:50:50,529 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 19:50:50,559 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 19:51:36,503 - root - INFO - The file C:\Users\ricewater\Documents\TestCorpus\aa124a4b4df12b34e74ee7f6c683b2ebec4ce9a8edcf9be345823b4fdcf5d868\aa124a4b4df12b34e74ee7f6c683b2ebec4ce9a8edcf9be345823b4fdcf5d868 doesn't have VBA macros.
+2024-04-01 19:51:44,731 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\aa124a4b4df12b34e74ee7f6c683b2ebec4ce9a8edcf9be345823b4fdcf5d868\aa124a4b4df12b34e74ee7f6c683b2ebec4ce9a8edcf9be345823b4fdcf5d868: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 5.73 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\aa124a4b4df12b34e74ee7f6c683b2ebec4ce9a8edcf9be345823b4fdcf5d868\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:51:44,731 - root - INFO - Command output for file aa124a4b4df12b34e74ee7f6c683b2ebec4ce9a8edcf9be345823b4fdcf5d868:
+2024-04-01 19:52:03,052 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\acadf15ec363fe3cc373091cbe879e64f935139363a8e8df18fd9e59317cc918.
+2024-04-01 19:52:19,562 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\acadf15ec363fe3cc373091cbe879e64f935139363a8e8df18fd9e59317cc918\acadf15ec363fe3cc373091cbe879e64f935139363a8e8df18fd9e59317cc918: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 10.46 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\acadf15ec363fe3cc373091cbe879e64f935139363a8e8df18fd9e59317cc918\\flossresults_reduced_7.json\r\n'
+2024-04-01 19:52:19,562 - root - INFO - Command output for file acadf15ec363fe3cc373091cbe879e64f935139363a8e8df18fd9e59317cc918:
+2024-04-01 19:52:22,356 - __main__ - INFO - Warning: No code signature found
+2024-04-01 19:52:22,356 - __main__ - INFO - Warning: No source version found
+2024-04-01 19:52:22,900 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 19:52:23,763 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 19:52:23,763 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 20:14:41,440 - root - ERROR - Invalid IP address format: 028.10.1.2
+2024-04-01 20:15:16,215 - root - ERROR - Invalid IP address format: 9.18.13.078
+2024-04-01 20:15:35,069 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\b86c695822013483fa4e2dfdf712c5ee777d7b99cbad8c2fa2274b133481eadb.
+2024-04-01 20:15:37,233 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\b86c695822013483fa4e2dfdf712c5ee777d7b99cbad8c2fa2274b133481eadb\b86c695822013483fa4e2dfdf712c5ee777d7b99cbad8c2fa2274b133481eadb: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.01 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\b86c695822013483fa4e2dfdf712c5ee777d7b99cbad8c2fa2274b133481eadb\\flossresults_reduced_7.json\r\n'
+2024-04-01 20:15:37,233 - root - INFO - Command output for file b86c695822013483fa4e2dfdf712c5ee777d7b99cbad8c2fa2274b133481eadb:
+2024-04-01 20:15:37,521 - __main__ - INFO - Warning: No source version found
+2024-04-01 20:15:37,522 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 20:15:37,528 - __main__ - INFO - Warning: No resource found
+2024-04-01 20:15:37,528 - __main__ - INFO - Error: No dll found
+2024-04-01 20:15:37,528 - __main__ - INFO - Warning: No import found
+2024-04-01 20:15:37,528 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 20:15:40,837 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\dde03348075512796241389dfea5560c20a3d2a2eac95c894e7bbed5e85a0acc.
+2024-04-01 20:15:57,506 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\dde03348075512796241389dfea5560c20a3d2a2eac95c894e7bbed5e85a0acc\dde03348075512796241389dfea5560c20a3d2a2eac95c894e7bbed5e85a0acc: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 10.60 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\dde03348075512796241389dfea5560c20a3d2a2eac95c894e7bbed5e85a0acc\\flossresults_reduced_7.json\r\n'
+2024-04-01 20:15:57,506 - root - INFO - Command output for file dde03348075512796241389dfea5560c20a3d2a2eac95c894e7bbed5e85a0acc:
+2024-04-01 20:16:00,209 - __main__ - INFO - Warning: No code signature found
+2024-04-01 20:16:00,209 - __main__ - INFO - Warning: No source version found
+2024-04-01 20:16:00,758 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 20:16:01,617 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 20:16:01,617 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 20:22:04,482 - backoff - INFO - Backing off _impl(...) for 0.9s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:05,633 - backoff - INFO - Backing off _impl(...) for 0.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:05,935 - backoff - INFO - Backing off _impl(...) for 3.9s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:10,169 - backoff - INFO - Backing off _impl(...) for 5.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:15,718 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:16,011 - backoff - INFO - Backing off _impl(...) for 0.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:17,046 - backoff - INFO - Backing off _impl(...) for 1.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:19,159 - backoff - INFO - Backing off _impl(...) for 0.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:19,864 - backoff - INFO - Backing off _impl(...) for 7.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:27,877 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:28,210 - backoff - INFO - Backing off _impl(...) for 0.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:28,882 - backoff - INFO - Backing off _impl(...) for 1.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:30,727 - backoff - INFO - Backing off _impl(...) for 4.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:34,990 - backoff - INFO - Backing off _impl(...) for 7.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:42,298 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:42,616 - backoff - INFO - Backing off _impl(...) for 0.1s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:43,029 - backoff - INFO - Backing off _impl(...) for 1.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:44,501 - backoff - INFO - Backing off _impl(...) for 1.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:46,457 - backoff - INFO - Backing off _impl(...) for 5.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:52,033 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:52,316 - backoff - INFO - Backing off _impl(...) for 0.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:53,075 - backoff - INFO - Backing off _impl(...) for 0.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:54,188 - backoff - INFO - Backing off _impl(...) for 0.6s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:55,019 - backoff - INFO - Backing off _impl(...) for 4.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:59,470 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:22:59,743 - backoff - INFO - Backing off _impl(...) for 0.1s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:00,156 - backoff - INFO - Backing off _impl(...) for 0.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:00,935 - backoff - INFO - Backing off _impl(...) for 1.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:02,548 - backoff - INFO - Backing off _impl(...) for 5.9s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:08,764 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:09,040 - backoff - INFO - Backing off _impl(...) for 0.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:09,784 - backoff - INFO - Backing off _impl(...) for 1.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:11,484 - backoff - INFO - Backing off _impl(...) for 2.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:14,224 - backoff - INFO - Backing off _impl(...) for 0.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:14,909 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:15,177 - backoff - INFO - Backing off _impl(...) for 0.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:15,821 - backoff - INFO - Backing off _impl(...) for 0.1s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:16,246 - backoff - INFO - Backing off _impl(...) for 0.6s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:17,189 - backoff - INFO - Backing off _impl(...) for 7.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:24,802 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:25,090 - backoff - INFO - Backing off _impl(...) for 0.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:25,401 - backoff - INFO - Backing off _impl(...) for 0.1s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:25,814 - backoff - INFO - Backing off _impl(...) for 0.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:26,605 - backoff - INFO - Backing off _impl(...) for 1.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:28,320 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:28,592 - backoff - INFO - Backing off _impl(...) for 0.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:29,180 - backoff - INFO - Backing off _impl(...) for 1.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:31,010 - backoff - INFO - Backing off _impl(...) for 3.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:23:34,652 - backoff - INFO - Backing off _impl(...) for 4.6s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:24:35,976 - root - ERROR - Invalid IP address format: 028.10.1.2
+2024-04-01 20:25:01,335 - root - ERROR - Invalid IP address format: 9.18.13.078
+2024-04-01 20:25:17,202 - root - ERROR - error: Process the file C:\Users\ricewater\Documents\TestCorpus\e6bbc33815b9f20b0cf832d7401dd893fbc467c800728b5891336706da0dbcec failed because: Command '['bins/exiftool.exe', '-j', '-charset', 'latin1', 'C:\\Users\\ricewater\\Documents\\TestCorpus\\e6bbc33815b9f20b0cf832d7401dd893fbc467c800728b5891336706da0dbcec\\e6bbc33815b9f20b0cf832d7401dd893fbc467c800728b5891336706da0dbcec']' returned non-zero exit status 1.
+2024-04-01 20:25:20,512 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\f4e9e73265a87139b9f090ff69d8c246ca68d858952f7eef0f0686ef24c5fbb6.
+2024-04-01 20:25:22,729 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\f4e9e73265a87139b9f090ff69d8c246ca68d858952f7eef0f0686ef24c5fbb6\f4e9e73265a87139b9f090ff69d8c246ca68d858952f7eef0f0686ef24c5fbb6: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.14 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\f4e9e73265a87139b9f090ff69d8c246ca68d858952f7eef0f0686ef24c5fbb6\\flossresults_reduced_7.json\r\n'
+2024-04-01 20:25:22,729 - root - INFO - Command output for file f4e9e73265a87139b9f090ff69d8c246ca68d858952f7eef0f0686ef24c5fbb6:
+2024-04-01 20:25:23,099 - __main__ - INFO - Warning: No code signature found
+2024-04-01 20:25:23,099 - __main__ - INFO - Warning: No source version found
+2024-04-01 20:25:23,099 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 20:25:23,102 - __main__ - INFO - Warning: No exported function found
+2024-04-01 20:25:23,102 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 20:25:23,102 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 20:25:23,103 - __main__ - INFO - Warning: No load configuration found
+2024-04-01 20:25:29,876 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\fa71eee906a7849ba3f4bab74edb577bd1f1f8397ca428591b4a9872ce1f1e9b\fa71eee906a7849ba3f4bab74edb577bd1f1f8397ca428591b4a9872ce1f1e9b: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.03 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\fa71eee906a7849ba3f4bab74edb577bd1f1f8397ca428591b4a9872ce1f1e9b\\flossresults_reduced_7.json\r\n'
+2024-04-01 20:25:29,876 - root - INFO - Command output for file fa71eee906a7849ba3f4bab74edb577bd1f1f8397ca428591b4a9872ce1f1e9b:
+2024-04-01 20:25:35,003 - root - INFO - Unsupported file type for C:\Users\ricewater\Documents\TestCorpus\fad482ded2e25ce9e1dd3d3ecc3227af714bdfbbde04347dbc1b21d6a3670405.
+2024-04-01 20:25:51,671 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\fad482ded2e25ce9e1dd3d3ecc3227af714bdfbbde04347dbc1b21d6a3670405\fad482ded2e25ce9e1dd3d3ecc3227af714bdfbbde04347dbc1b21d6a3670405: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 10.46 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\fad482ded2e25ce9e1dd3d3ecc3227af714bdfbbde04347dbc1b21d6a3670405\\flossresults_reduced_7.json\r\n'
+2024-04-01 20:25:51,671 - root - INFO - Command output for file fad482ded2e25ce9e1dd3d3ecc3227af714bdfbbde04347dbc1b21d6a3670405:
+2024-04-01 20:25:54,371 - __main__ - INFO - Warning: No code signature found
+2024-04-01 20:25:54,371 - __main__ - INFO - Warning: No source version found
+2024-04-01 20:25:54,905 - __main__ - INFO - Warning: No interpreter found
+2024-04-01 20:25:55,763 - __main__ - INFO - Warning: No imported symbols found
+2024-04-01 20:25:55,764 - __main__ - INFO - Warning: No exported symbol found
+2024-04-01 20:27:25,277 - backoff - INFO - Backing off _impl(...) for 0.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:25,776 - backoff - INFO - Backing off _impl(...) for 1.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:27,054 - backoff - INFO - Backing off _impl(...) for 1.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:28,357 - backoff - INFO - Backing off _impl(...) for 6.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:34,690 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:34,984 - backoff - INFO - Backing off _impl(...) for 0.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:35,441 - backoff - INFO - Backing off _impl(...) for 1.6s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:37,300 - backoff - INFO - Backing off _impl(...) for 3.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:41,062 - backoff - INFO - Backing off _impl(...) for 2.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:44,105 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:44,387 - backoff - INFO - Backing off _impl(...) for 0.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:45,351 - backoff - INFO - Backing off _impl(...) for 2.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:47,622 - backoff - INFO - Backing off _impl(...) for 1.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:49,680 - backoff - INFO - Backing off _impl(...) for 5.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:55,512 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:55,798 - backoff - INFO - Backing off _impl(...) for 0.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:56,860 - backoff - INFO - Backing off _impl(...) for 1.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:27:58,199 - backoff - INFO - Backing off _impl(...) for 2.9s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:01,406 - backoff - INFO - Backing off _impl(...) for 6.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:08,537 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:08,831 - backoff - INFO - Backing off _impl(...) for 0.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:09,852 - backoff - INFO - Backing off _impl(...) for 1.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:11,594 - backoff - INFO - Backing off _impl(...) for 0.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:12,571 - backoff - INFO - Backing off _impl(...) for 2.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:15,075 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:15,380 - backoff - INFO - Backing off _impl(...) for 0.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:15,669 - backoff - INFO - Backing off _impl(...) for 1.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:16,990 - backoff - INFO - Backing off _impl(...) for 3.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:20,556 - backoff - INFO - Backing off _impl(...) for 5.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:26,337 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:26,606 - backoff - INFO - Backing off _impl(...) for 0.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:26,940 - backoff - INFO - Backing off _impl(...) for 1.9s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:29,101 - backoff - INFO - Backing off _impl(...) for 3.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:32,796 - backoff - INFO - Backing off _impl(...) for 0.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:33,288 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:33,564 - backoff - INFO - Backing off _impl(...) for 0.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:34,196 - backoff - INFO - Backing off _impl(...) for 1.1s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:28:35,599 - backoff - INFO - Backing off _impl(...) for 3.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:32,728 - backoff - INFO - Backing off _impl(...) for 0.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:33,270 - backoff - INFO - Backing off _impl(...) for 1.1s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:34,694 - backoff - INFO - Backing off _impl(...) for 1.9s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:36,884 - backoff - INFO - Backing off _impl(...) for 7.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:44,612 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:44,892 - backoff - INFO - Backing off _impl(...) for 1.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:46,154 - backoff - INFO - Backing off _impl(...) for 1.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:48,200 - backoff - INFO - Backing off _impl(...) for 1.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:49,666 - backoff - INFO - Backing off _impl(...) for 1.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:51,274 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:51,595 - backoff - INFO - Backing off _impl(...) for 0.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:52,030 - backoff - INFO - Backing off _impl(...) for 0.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:52,511 - backoff - INFO - Backing off _impl(...) for 1.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:30:53,774 - backoff - INFO - Backing off _impl(...) for 8.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:02,038 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:02,314 - backoff - INFO - Backing off _impl(...) for 0.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:03,118 - backoff - INFO - Backing off _impl(...) for 0.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:04,191 - backoff - INFO - Backing off _impl(...) for 3.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:07,504 - backoff - INFO - Backing off _impl(...) for 3.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:11,333 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:11,631 - backoff - INFO - Backing off _impl(...) for 0.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:12,329 - backoff - INFO - Backing off _impl(...) for 1.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:14,256 - backoff - INFO - Backing off _impl(...) for 1.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:16,222 - backoff - INFO - Backing off _impl(...) for 4.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:20,832 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:21,104 - backoff - INFO - Backing off _impl(...) for 0.6s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:21,947 - backoff - INFO - Backing off _impl(...) for 1.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:23,953 - backoff - INFO - Backing off _impl(...) for 4.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:28,207 - backoff - INFO - Backing off _impl(...) for 6.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:35,611 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:36,729 - backoff - INFO - Backing off _impl(...) for 0.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:37,193 - backoff - INFO - Backing off _impl(...) for 1.1s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:38,653 - backoff - INFO - Backing off _impl(...) for 3.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:42,691 - backoff - INFO - Backing off _impl(...) for 2.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:45,266 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:45,556 - backoff - INFO - Backing off _impl(...) for 0.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:46,196 - backoff - INFO - Backing off _impl(...) for 1.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:47,717 - backoff - INFO - Backing off _impl(...) for 3.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:51,663 - backoff - INFO - Backing off _impl(...) for 6.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:58,236 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:58,504 - backoff - INFO - Backing off _impl(...) for 0.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:31:59,238 - backoff - INFO - Backing off _impl(...) for 1.1s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:00,602 - backoff - INFO - Backing off _impl(...) for 3.6s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:04,533 - backoff - INFO - Backing off _impl(...) for 4.9s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:09,754 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:10,031 - backoff - INFO - Backing off _impl(...) for 0.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:10,358 - backoff - INFO - Backing off _impl(...) for 1.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:11,630 - backoff - INFO - Backing off _impl(...) for 0.6s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:12,520 - backoff - INFO - Backing off _impl(...) for 7.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:20,669 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:20,951 - backoff - INFO - Backing off _impl(...) for 0.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:21,446 - backoff - INFO - Backing off _impl(...) for 0.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:22,456 - backoff - INFO - Backing off _impl(...) for 1.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:24,600 - backoff - INFO - Backing off _impl(...) for 4.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:29,657 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:29,940 - backoff - INFO - Backing off _impl(...) for 0.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:30,734 - backoff - INFO - Backing off _impl(...) for 0.6s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:31,621 - backoff - INFO - Backing off _impl(...) for 2.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:34,666 - backoff - INFO - Backing off _impl(...) for 0.6s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:35,503 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:35,793 - backoff - INFO - Backing off _impl(...) for 0.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:36,725 - backoff - INFO - Backing off _impl(...) for 1.6s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:38,683 - backoff - INFO - Backing off _impl(...) for 1.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:41,038 - backoff - INFO - Backing off _impl(...) for 6.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:47,373 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:47,653 - backoff - INFO - Backing off _impl(...) for 0.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:48,446 - backoff - INFO - Backing off _impl(...) for 1.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:50,440 - backoff - INFO - Backing off _impl(...) for 2.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:53,283 - backoff - INFO - Backing off _impl(...) for 5.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:58,879 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:32:59,144 - backoff - INFO - Backing off _impl(...) for 0.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:00,215 - backoff - INFO - Backing off _impl(...) for 1.9s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:02,383 - backoff - INFO - Backing off _impl(...) for 2.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:05,051 - backoff - INFO - Backing off _impl(...) for 3.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:08,755 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:09,105 - backoff - INFO - Backing off _impl(...) for 0.9s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:10,334 - backoff - INFO - Backing off _impl(...) for 0.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:11,106 - backoff - INFO - Backing off _impl(...) for 0.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:11,667 - backoff - INFO - Backing off _impl(...) for 0.3s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:12,250 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:12,512 - backoff - INFO - Backing off _impl(...) for 0.8s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:13,626 - backoff - INFO - Backing off _impl(...) for 0.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:14,426 - backoff - INFO - Backing off _impl(...) for 3.4s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:18,138 - backoff - INFO - Backing off _impl(...) for 3.7s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:22,078 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:22,345 - backoff - INFO - Backing off _impl(...) for 0.5s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:23,125 - backoff - INFO - Backing off _impl(...) for 1.6s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:25,025 - backoff - INFO - Backing off _impl(...) for 1.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:26,365 - backoff - INFO - Backing off _impl(...) for 3.9s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:30,568 - backoff - ERROR - Giving up _impl(...) after 5 tries (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:30,844 - backoff - INFO - Backing off _impl(...) for 0.9s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:32,013 - backoff - INFO - Backing off _impl(...) for 0.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:32,522 - backoff - INFO - Backing off _impl(...) for 2.0s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:33:34,829 - backoff - INFO - Backing off _impl(...) for 6.2s (censys.common.exceptions.CensysRateLimitExceededException: 429 (Too Many Requests): Rate limit exceeded. See https://search.censys.io/account for rate limit details.)
+2024-04-01 20:34:12,457 - root - ERROR - Invalid IP address format: 028.10.1.2
+2024-04-01 20:34:38,010 - root - ERROR - Invalid IP address format: 9.18.13.078
+2024-04-01 20:34:55,655 - root - ERROR - Error while processing floss on file: C:\Users\ricewater\Documents\TestCorpus\fde8dca9b93f9c9df67d9a2698d73f1b5ae098a5cdc6c0f3e92b267d3b78dd18\fde8dca9b93f9c9df67d9a2698d73f1b5ae098a5cdc6c0f3e92b267d3b78dd18: b'INFO: floss: extracting static strings...\r\nINFO: floss: finished execution after 0.01 seconds\r\nINFO: floss: writing results to C:\\Users\\ricewater\\Documents\\TestCorpus\\fde8dca9b93f9c9df67d9a2698d73f1b5ae098a5cdc6c0f3e92b267d3b78dd18\\flossresults_reduced_7.json\r\n'
+2024-04-01 20:34:55,655 - root - INFO - Command output for file fde8dca9b93f9c9df67d9a2698d73f1b5ae098a5cdc6c0f3e92b267d3b78dd18:
