@@ -6,6 +6,8 @@ import pandas as pd
 from sklearn.calibration import LabelEncoder
 from tensorflow.keras.models import Model
 
+
+from .doc_features import DocFeatures
 from .exif_feat import ExifFeatures
 from .floss_general_feat import FlossFeatures
 from .floss_regex import FlossRegexFeatures
@@ -22,6 +24,7 @@ def get_combined_features(
     flossregex_features: bool = False,
     exported_functions_features: bool = False,
     configuration_version: bool = False,
+    document_features: bool = False,
     exported_functions_similarity: float = 0.8,
 ):
     """
@@ -35,6 +38,7 @@ def get_combined_features(
     - flossregex_features: Whether to include FlossRegexFeatures.
     - exported_functions_features: Whether to include ExportedFunctionsFeatures.
     - configuration_version: Whether to include ConfigurationVersion from LiefFeatures.
+    - document_features: Whether to include DocumentFeatures.
     - exported_functions_similarity: The similarity threshold between exported functions.
 
     Returns:
@@ -50,6 +54,7 @@ def get_combined_features(
         "flossregex_features": pd.DataFrame(),
         "exported_functions_features": pd.DataFrame(),
         "configuration_version": pd.DataFrame(),
+        "document_features": pd.DataFrame(),
     }
     if lief_features:
         lief_feat = LiefFeatures()
@@ -134,6 +139,12 @@ def get_combined_features(
         conf_version["hash"] = lcf["hash"].astype(str).copy()
         combined_df = combined_df.merge(conf_version, how="inner", on="hash")
         all_results_dict["configuration_version"] = conf_version
+
+    if document_features:
+        doc_feat = DocFeatures()
+        dcf = doc_feat.get_features()
+        dcf["hash"] = dcf["hash"].astype(str)
+        combined_df = combined_df.merge(dcf, how="inner", on="hash")
     return combined_df, all_results_dict
 
 

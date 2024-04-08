@@ -1,7 +1,11 @@
 import configparser
+import os
+feature_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+
+DEFAULT_CONFIG_FILE = os.path.join(feature_directory, "config\projectconfig.ini")
 
 class Config():
-    def __init__(self, config_file = "C:/Users/ricewater/Documents/FeatureGeneration/config/projectconfig.ini") -> None:
+    def __init__(self, config_file = DEFAULT_CONFIG_FILE) -> None:
         self.config = configparser.ConfigParser()
         self.config.read(config_file)
 
