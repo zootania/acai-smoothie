@@ -352,12 +352,13 @@ def process_yara_rule(
         result_filename: Name of the JSON file to save the results to. Defaults to "malcatYaraResults.json".
     """
     # Compile YARA rules from the specified file path
+    logging.info(f"Processing Yara rules for {file_path}")
     rules = yara.compile(
         filepath=yara_rules_path, includes=True, error_on_warning=False
     )
 
     try:
-        matches = rules.match(file_path)
+        matches = rules.match(file_path, timeout=120)
         yara_match = {"hash": os.path.basename(os.path.normpath(file_path))}
 
         # Store each match in the dictionary
@@ -646,7 +647,7 @@ def extract_elf_attributes(binary: lief.ELF.Binary) -> dict:
 
 def check_binary_format(
     binary,
-) -> Literal["DLLfile", "EXEfile", "machofile", "elffile", "null"]:
+) -> Optional[Literal["DLLfile", "EXEfile", "machofile", "elffile"]]:
     """
     Checks the format of a binary file and returns its type as a literal string.
 
@@ -654,10 +655,10 @@ def check_binary_format(
         binary: The binary file to check.
 
     Returns:
-        Literal['DLLfile', 'EXEfile', 'machofile', 'elffile', 'null']: A literal string indicating the type of the binary.
+        Literal['DLLfile', 'EXEfile', 'machofile', 'elffile']: A literal string indicating the type of the binary.
     """
     if not binary:
-        return "null"
+        return None
 
     if binary.format == lief.EXE_FORMATS.PE:
         if binary.header.characteristics & lief.PE.HEADER_CHARACTERISTICS.DLL:
@@ -669,7 +670,7 @@ def check_binary_format(
     elif binary.format == lief.EXE_FORMATS.ELF:
         return "elffile"
 
-    return "null"
+    return None
 
 
 def exported_functions(binary: lief.Binary, file_type: str) -> dict:
@@ -1123,7 +1124,9 @@ def process_lief_features(
         type_of_binary = check_binary_format(
             binary
         )  # Updated to use the refactored function name
-
+        logging.info(f"Processing LIEF features for hash: {sample_file_path} and file type {type_of_binary}")
+        if not type_of_binary:
+            return final_result
         # Assuming each function returns a dictionary and takes `binary` and `type_of_binary` as arguments
         functions = [
             code_signature,
@@ -1281,41 +1284,6 @@ def is_valid_windows_file_path(path: str) -> bool:
     return bool(re.match(pattern, path)) and len(path) <= 256
 
 
-def get_regex_patterns() -> dict:
-    """
-    Defines regular expressions for various patterns.
-
-    Returns:
-        A dictionary of pattern names to their corresponding regular expressions.
-    """
-    return {
-        "URL": r"(http[s]?|ftp|telnet|ldap|file):\/\/([\w|\d]{2,6}\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(\:[\d]{2,6})?",
-        "IPv4": r"(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)",
-        "MD5": r"[a-fA-F0-9]{32}",
-        "SHA1": r"[a-fA-F0-9]{40}",
-        "SHA256": r"[a-fA-F0-9]{64}",
-        # Exclude space from file names (\s)
-        "WindowsFilePath": r"(?:[\w]\:|\\)(\\[a-z_\-0-9\.]+){1,125}\.(txt|gif|pdf|doc|docx|xls|xlsx|msg|log|rtf|key|dat|jpg|png|exe|bat|apk|jar|js|php|htm|html|dll|lnk)",
-        "LinuxFilePath": r"\/[\w]{3,10}[\/]+[\w]{1,40}[\/]+([\w|+|-|%|\.|~|_|-|\/])*[\w|+|-|%|\.|~|_|-]{1,255}",
-        "Ethereum": r"^0x[a-fA-F0-9]{40}$",
-        "Bitcoin": r"([13]|bc1)[A-HJ-NP-Za-km-z1-9]{25,39}",
-        "Email": r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}",
-        "SlackToken": r"(xox[pboa]-[0-9]{12}-[0-9]{12}-[0-9]{12}-[a-z0-9]{32})",
-        "RSAprivatekey": r"-----BEGIN RSA PRIVATE KEY-----",
-        "SSHDSAprivatekey": r"-----BEGIN DSA PRIVATE KEY-----",
-        "SSHECprivatekey": r"-----BEGIN EC PRIVATE KEY-----",
-        "PGPprivatekeyblock": r"-----BEGIN PGP PRIVATE KEY BLOCK-----",
-        "GitHub": r"[gG][iI][tT][hH][uU][bB].*['|\"][0-9a-zA-Z]{35,40}['|\"]",
-        "GenericAPIKey": r"[aA][pP][iI]_?[kK][eE][yY].*['|\"][0-9a-zA-Z]{32,45}['|\"]",
-        "GoogleAPIKey": r"AIza[0-9A-Za-z\\-_]{35}",
-        "GoogleGCPServiceaccount": r"\"type\": \"service_account\"",
-        "GoogleGmailAPIKey": r"AIza[0-9A-Za-z\\-_]{35}",
-        "GoogleGmailOAuth": r"[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com",
-        "PayPalBraintreeAccessToken": r"access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}",
-        "TwitterAccessToken": r"[tT][wW][iI][tT][tT][eE][rR].*[1-9][0-9]+-[0-9a-zA-Z]{40}",
-        "TwitterOAuth": r"[tT][wW][iI][tT][tT][eE][rR].*['|\"][0-9a-zA-Z]{35,44}['|\"]",
-    }
-
 
 def combine_patterns(patterns: dict[str, str]) -> re.Pattern:
     """
@@ -1359,119 +1327,214 @@ def extract_matches_combined(
     return results
 
 
-def extract_with_regex_individual_patterns(text: str) -> dict:
+def get_regex_patterns() -> dict:
     """
-    Uses regular expressions to find various patterns in the provided text, applying each pattern individually.
-
-    Args:
-        text: The text to search through.
+    Defines regular expressions for various patterns.
 
     Returns:
-        A dictionary of found patterns.
+        A dictionary of pattern names to their corresponding regular expressions.
     """
+    return {
+        "URL": r"(http[s]?|ftp|telnet|ldap|file):\/\/([\w|\d]{2,6}\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b(\:[\d]{2,6})?",
+        "IPv4": r"(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)",
+        "MD5": r"[a-fA-F0-9]{32}",
+        "SHA1": r"[a-fA-F0-9]{40}",
+        "SHA256": r"[a-fA-F0-9]{64}",
+        # Exclude space from file names (\s)
+        "WindowsFilePath": r"(?:[\w]\:|\\)(\\[a-z_\-0-9\.]+){1,125}\.(txt|gif|pdf|doc|docx|xls|xlsx|msg|log|rtf|key|dat|jpg|png|exe|bat|apk|jar|js|php|htm|html|dll|lnk)",
+        "LinuxFilePath": r"\/[\w]{3,10}[\/]+[\w]{1,40}[\/]+([\w|+|-|%|\.|~|_|-|\/])*[\w|+|-|%|\.|~|_|-]{1,255}",
+        "Ethereum": r"^0x[a-fA-F0-9]{40}$",
+        "Bitcoin": r"([13]|bc1)[A-HJ-NP-Za-km-z1-9]{25,39}",
+        "Email": r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}",
+        "SlackToken": r"(xox[pboa]-[0-9]{12}-[0-9]{12}-[0-9]{12}-[a-z0-9]{32})",
+        "RSAprivatekey": r"-----BEGIN RSA PRIVATE KEY-----",
+        "SSHDSAprivatekey": r"-----BEGIN DSA PRIVATE KEY-----",
+        "SSHECprivatekey": r"-----BEGIN EC PRIVATE KEY-----",
+        "PGPprivatekeyblock": r"-----BEGIN PGP PRIVATE KEY BLOCK-----",
+        "GitHub": r"[gG][iI][tT][hH][uU][bB].*['|\"][0-9a-zA-Z]{35,40}['|\"]",
+        "GenericAPIKey": r"[aA][pP][iI]_?[kK][eE][yY].*['|\"][0-9a-zA-Z]{32,45}['|\"]",
+        "GoogleAPIKey": r"AIza[0-9A-Za-z\\-_]{35}",
+        "GoogleGCPServiceaccount": r"\"type\": \"service_account\"",
+        "GoogleGmailAPIKey": r"AIza[0-9A-Za-z\\-_]{35}",
+        "GoogleGmailOAuth": r"[0-9]+-[0-9A-Za-z_]{32}\\.apps\\.googleusercontent\\.com",
+        "PayPalBraintreeAccessToken": r"access_token\\$production\\$[0-9a-z]{16}\\$[0-9a-f]{32}",
+        "TwitterAccessToken": r"[tT][wW][iI][tT][tT][eE][rR].*[1-9][0-9]+-[0-9a-zA-Z]{40}",
+        "TwitterOAuth": r"[tT][wW][iI][tT][tT][eE][rR].*['|\"][0-9a-zA-Z]{35,44}['|\"]",
+    }
+
+
+# def extract_with_regex_individual_patterns(text: str) -> dict:
+#     """
+#     Uses regular expressions to find various patterns in the provided text, applying each pattern individually.
+
+#     Args:
+#         text: The text to search through.
+
+#     Returns:
+#         A dictionary of found patterns.
+#     """
+#     patterns = get_regex_patterns()
+#     results = {}
+
+#     for name, pattern in patterns.items():
+#         matches = set()
+#         for match in re.finditer(pattern, text, re.MULTILINE | re.IGNORECASE):
+#             # Depending on the pattern, you might want to use different groups
+#             matched_text = match.group(0)
+#             if pattern == "WindowsFilePath" and not is_valid_windows_file_path(
+#                 matched_text
+#             ):
+#                 continue
+#             if matched_text:
+#                 matches.add(matched_text)
+#         results[name] = list(matches)
+
+#     return results
+
+
+# def find_pattern_matches(text: str, pattern: str) -> list[str]:
+#     """
+#     Finds all matches of a single pattern in the given text.
+
+#     Args:
+#         text: The text to search through.
+#         pattern: The regex pattern to apply.
+
+#     Returns:
+#         A list of unique matches for the pattern.
+#     """
+#     return list(
+#         {
+#             match.group(0)
+#             for match in re.finditer(pattern, text, re.MULTILINE | re.IGNORECASE)
+#         }
+#     )
+
+
+# async def async_extract_with_regex_individual_patterns(text: str) -> dict[str, list]:
+#     """
+#     Asynchronously applies each regex pattern individually to the provided text.
+#     """
+#     patterns = (
+#         get_regex_patterns()
+#     )  # Assuming this function is defined elsewhere and returns a dict of patterns
+#     results = {}
+
+#     # Process each pattern asynchronously
+#     for name, pattern in patterns.items():
+#         matches = set()
+#         for match in re.finditer(pattern, text, re.MULTILINE | re.IGNORECASE):
+#             matched_text = match.group(0)
+#             if matched_text:
+#                 matches.add(matched_text)
+#         results[name] = list(matches)
+
+#     return results
+
+
+# async def regex_fun(
+#     path_to_json: str,
+#     file_hash: str,
+#     subdir: str,
+#     reprocess: bool = False,
+#     file_name: str = "regex_results.json",
+# ) -> None:
+#     """
+#     Asynchronously extracts various patterns like URLs, file paths, cryptographic hashes, and more from a given file.
+#     """
+#     logging.info(f"Processing REGEX features for filename: {file_name}")
+#     result_filename = os.path.join(subdir, file_name)
+
+#     if os.path.exists(result_filename) and not reprocess:
+#         logger.info("Result file already exists: %s", result_filename)
+#         return
+
+#     results: dict[str, dict[str, Any]] = {file_hash: {}}
+
+#     try:
+#         async with aiofiles.open(path_to_json, "r", encoding="utf-8") as f:
+#             raw_data = await f.read()
+
+#         data: dict[str, Any] = json.loads(raw_data)
+#         all_strings = data.get("strings", {})
+#         if not all_strings:
+#             raise ValueError(
+#                 f"Error: Could not find strings in the provided file '{path_to_json}'"
+#             )
+
+#         raw_static_strings = " ".join(
+#             s.get("string").strip()
+#             for s in all_strings.get("static_strings", [])
+#             if s.get("string")
+#         )
+#         details = await async_extract_with_regex_individual_patterns(raw_static_strings)
+#         results[file_hash] = details
+
+#         async with aiofiles.open(result_filename, "w", encoding="utf-8") as f:
+#             await f.write(json.dumps(results, indent=4))
+
+#     except Exception as e:
+#         logger.exception(
+#             "Exception occurred while processing file %s: %s", path_to_json, e
+#         )
+def get_combined_regex_pattern() -> str:
     patterns = get_regex_patterns()
+    # Combine patterns using named groups
+    combined_pattern_parts = [f"(?P<{name}>{pattern})" for name, pattern in patterns.items()]
+    combined_pattern = "|".join(combined_pattern_parts)
+    return combined_pattern
+
+def find_matches_with_combined_regex(text: str, combined_pattern: str) -> dict:
+    """
+    Finds all matches for the combined regex pattern in the given text, ensuring that
+    matches from all named groups are captured, even if only one group matches at a time.
+    """
     results = {}
-
-    for name, pattern in patterns.items():
-        matches = set()
-        for match in re.finditer(pattern, text, re.MULTILINE | re.IGNORECASE):
-            # Depending on the pattern, you might want to use different groups
-            matched_text = match.group(0)
-            if pattern == "WindowsFilePath" and not is_valid_windows_file_path(
-                matched_text
-            ):
-                continue
+    for match in re.finditer(combined_pattern, text, re.MULTILINE | re.IGNORECASE):
+        # Check each named group in the match
+        for name, matched_text in match.groupdict().items():
             if matched_text:
-                matches.add(matched_text)
-        results[name] = list(matches)
+                # Initialize the set for this group if it's the first match
+                if name not in results:
+                    results[name] = set()
+                results[name].add(matched_text)
+                
+    # Convert sets to lists for JSON serialization
+    return {name: list(matches) for name, matches in results.items()}
 
-    return results
-
-
-def find_pattern_matches(text: str, pattern: str) -> list[str]:
-    """
-    Finds all matches of a single pattern in the given text.
-
-    Args:
-        text: The text to search through.
-        pattern: The regex pattern to apply.
-
-    Returns:
-        A list of unique matches for the pattern.
-    """
-    return list(
-        {
-            match.group(0)
-            for match in re.finditer(pattern, text, re.MULTILINE | re.IGNORECASE)
-        }
-    )
-
-
-async def async_extract_with_regex_individual_patterns(text: str) -> dict[str, list]:
-    """
-    Asynchronously applies each regex pattern individually to the provided text.
-    """
-    patterns = (
-        get_regex_patterns()
-    )  # Assuming this function is defined elsewhere and returns a dict of patterns
-    results = {}
-
-    # Process each pattern asynchronously
-    for name, pattern in patterns.items():
-        matches = set()
-        for match in re.finditer(pattern, text, re.MULTILINE | re.IGNORECASE):
-            matched_text = match.group(0)
-            if matched_text:
-                matches.add(matched_text)
-        results[name] = list(matches)
-
-    return results
-
-
-async def regex_fun(
-    path_to_json: str,
-    file_hash: str,
-    subdir: str,
-    reprocess: bool = False,
-    file_name: str = "regex_results.json",
-) -> None:
-    """
-    Asynchronously extracts various patterns like URLs, file paths, cryptographic hashes, and more from a given file.
-    """
+async def regex_fun(path_to_json: str, file_hash: str, subdir: str, reprocess: bool = False, file_name: str = "regex_results.json") -> None:
+    logging.info(f"Processing REGEX features for filename: {file_name}")
     result_filename = os.path.join(subdir, file_name)
 
     if os.path.exists(result_filename) and not reprocess:
-        logger.info("Result file already exists: %s", result_filename)
+        logging.info("Result file already exists: %s", result_filename)
         return
 
-    results: dict[str, dict[str, Any]] = {file_hash: {}}
+    combined_pattern = get_combined_regex_pattern()
+
+    results: dict[str, dict[str, any]] = {file_hash: {}}
 
     try:
         async with aiofiles.open(path_to_json, "r", encoding="utf-8") as f:
             raw_data = await f.read()
 
-        data: dict[str, Any] = json.loads(raw_data)
+        data: dict[str, any] = json.loads(raw_data)
         all_strings = data.get("strings", {})
         if not all_strings:
-            raise ValueError(
-                f"Error: Could not find strings in the provided file '{path_to_json}'"
-            )
+            raise ValueError(f"Error: Could not find strings in the provided file '{path_to_json}'")
 
-        raw_static_strings = " ".join(
-            s.get("string").strip()
-            for s in all_strings.get("static_strings", [])
-            if s.get("string")
-        )
-        details = await async_extract_with_regex_individual_patterns(raw_static_strings)
+        raw_static_strings = " ".join(s.get("string").strip() for s in all_strings.get("static_strings", []) if s.get("string"))
+        
+        # Use the combined regex pattern to find matches
+        details = find_matches_with_combined_regex(raw_static_strings, combined_pattern)
+        
         results[file_hash] = details
 
         async with aiofiles.open(result_filename, "w", encoding="utf-8") as f:
             await f.write(json.dumps(results, indent=4))
 
     except Exception as e:
-        logger.exception(
-            "Exception occurred while processing file %s: %s", path_to_json, e
-        )
+        logging.exception("Exception occurred while processing file %s: %s", path_to_json, e)
 
 
 def censys_ip_data(ip: str) -> dict:
@@ -1736,20 +1799,24 @@ async def process_generic_file(
         process_censys_file(
             regex_json_path, vt_meta_file_path, file_hash, root_dir, censys_file_name
         )
+    return
 
 
+import tqdm
 async def main():
     # FILE_HASH = "8b6380534dcae5830e1e194f8c54466db365246cb8df998686f04818e37d84c1"
     FLOSS_EXECUTABLE_PATH = "bins/floss2.2.exe"
-    BASE_DIR = r"C:\Users\ricewater\Documents\TestCorpus"
-    for FILE_HASH in os.listdir(BASE_DIR):
-        ROOT_DIR = os.path.join(BASE_DIR, FILE_HASH)
+    # BASE_DIR = r"C:\Users\ricewater\Documents\TestCorpus"
+    BASE_DIR = r"C:\Users\ricewater\Documents\MITREandCrowdstrikeApr2024Samples"
+
+    for file_hash in tqdm.tqdm(os.listdir(BASE_DIR)):
+        root_dir = os.path.join(BASE_DIR, file_hash)
         try:
-            await process_generic_file(FILE_HASH, ROOT_DIR, FLOSS_EXECUTABLE_PATH)
+            await asyncio.wait_for(process_generic_file(file_hash, root_dir, FLOSS_EXECUTABLE_PATH), timeout=300)
+        except asyncio.TimeoutError:
+            logging.error(f"Timeout occurred while processing the file {root_dir}")
         except Exception as process_exception:
-            logging.error(
-                f"error: Process the file {ROOT_DIR} failed because: {process_exception}"
-            )
+            logging.error(f"Error: Process the file {root_dir} failed because: {process_exception}")
         await asyncio.sleep(3)
 
 
